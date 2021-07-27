@@ -96,6 +96,4 @@ app.get('/product-details11', (req, res) => {
     res.render('product-details11', {layout :  'layouts/product-layout'})
 })
 
-app.listen(process.env.PORT || 8080, () => {
-    console.log(`Server is Running at http://localhost:${port}`)
-})
+app.listen(process.env.PORT || 8080)
