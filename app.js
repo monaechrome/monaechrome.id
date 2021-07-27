@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const port = 3000
 
 require('./utils/db')
 const order = require('./models/Order')
@@ -97,6 +96,6 @@ app.get('/product-details11', (req, res) => {
     res.render('product-details11', {layout :  'layouts/product-layout'})
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 8080, () => {
     console.log(`Server is Running at http://localhost:${port}`)
 })
